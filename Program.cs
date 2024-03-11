@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using Proyectp_02_PA.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=connection"));
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 

@@ -1,8 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Proyectp_02_PA.Data.Entities.Recipe>
+
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="px-5 py-6 py-xxl-10 hcf-bp-center hcf-bs-cover hcf-overlay hcf-transform" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/apipa-101ce.appspot.com/o/pexels-engin-akyurt-1435895.jpg?alt=media&token=873bc025-8fce-4ff0-97f9-a4fea0aaadf2');background-size: cover;background-position-y: -250px;">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6 text-center text-white">
+                <h1 class="display-3 fw-bold mb-3">Alimentacion Saludable</h1>
+                <p class="lead mb-5">Descubre cómo alimentarte de manera saludable con lo que ya tienes en tu cocina. Aprende a sacar el máximo provecho de tus ingredientes básicos y frescos para crear platos deliciosos y nutritivos. ¡Comienza hoy mismo tu camino hacia una vida más saludable!</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="/Recipes">
+                      <button type="button" class="btn btn-light btn-lg px-4 gap-3">Encuentra tu receta</button>
+                    </a>
+                    <a href="/Users/Create">
+                      <button type="button" class="btn btn-outline-light btn-lg px-4">Registrate</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-size: cover;max-height: 800px;">
+            <img src="https://firebasestorage.googleapis.com/v0/b/apipa-101ce.appspot.com/o/pexels-ella-olsson-1640771.jpg?alt=media&token=835aa79d-1db9-4ad9-8f11-754036a5d42e" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" style="background-size: cover;max-height: 800px;">
+            <img src="https://firebasestorage.googleapis.com/v0/b/apipa-101ce.appspot.com/o/pexels-katerina-holmes-5907592.jpg?alt=media&token=5c96ebe8-7d74-4f2e-be10-bb5bf9cba031" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" style="background-size: cover;max-height: 800px;">
+            <img src="https://firebasestorage.googleapis.com/v0/b/apipa-101ce.appspot.com/o/pexels-klaus-nielsen-6287295.jpg?alt=media&token=13878e36-fb1e-4275-a5f9-60f4b8973134" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>

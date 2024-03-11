@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Proyectp_02_PA.Data.Entities.Recipe>
+
+@{
+    ViewData["Title"] = "Recetas";
+}
+
+<h1>Recetas</h1>
+<hr/>
+
+<p>
+    <a asp-action="Create">Crea una nueva</a>
+</p>
+
+<div class="grid" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="https://firebasestorage.googleapis.com/v0/b/apipa-101ce.appspot.com/o/pexels-maria-bortolotto-6383082.jpg?alt=media&token=bc84fc1f-e49b-4873-ba85-4dd8de0be3e5" class="card-img-top" alt="Recipe">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                <p class="card-text">
+                    @{
+                        // Truncar la descripción si tiene más de 100 caracteres
+                        if (item.Descripcion != null)
+                        {
+                            var truncatedDescription = item.Descripcion.Length > 100 ? item.Descripcion.Substring(0, 100) + "..." : item.Descripcion;
+                            @Html.Raw(truncatedDescription)
+                            ;
+                        }
+                    }
+                </p>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Ver mas detalles</a>
+            </div>
+        </div>
+    }
+</div>

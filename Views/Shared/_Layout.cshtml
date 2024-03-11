@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Proyectp_02_PA</title>
+    <title>@ViewData["Title"] - Balanced Life</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Proyectp_02_PA.styles.css" asp-append-version="true" />
@@ -12,7 +12,8 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Proyectp_02_PA</a>
+                <img asp-area="" asp-controller="Home" asp-action="Index" style="height: 50px; padding-right: 10px;" src="https://firebasestorage.googleapis.com/v0/b/apipa-101ce.appspot.com/o/image-removebg-preview.png?alt=media&token=e61c1bfb-7d8e-4ecf-8b91-db4dc0df63e5" />
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Balanced Life</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,7 +21,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Create">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ingredients" asp-action="Index">Ingredientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="Index">Recetas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -30,15 +37,17 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" style="
+    max-width: none;
+    max-height: none; ">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Proyectp_02_PA - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container" >
+            &copy; 2024 - Balanced Life- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
